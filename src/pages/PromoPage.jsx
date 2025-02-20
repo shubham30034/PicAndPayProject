@@ -31,15 +31,15 @@ const PromoPage = () => {
             </h1>
             
             <p className="text-lg lg:text-xl text-gray-600 leading-relaxed">
-              Revolutionize your payment experience with our seamless, stylish solution. 
+              Revolutionize your shopping experience with our seamless, stylish solution. 
               Enjoy these benefits:
             </p>
             
             <ul className="space-y-3">
               {[
-                '⚡ Instant transaction processing',
-                '🔒 Military-grade security',
-                '🎨 Customizable payment themes',
+                '⚡Instant Shopping – Pick your product and pay ',
+                '🔒 Military-grade securit',
+                '🎁 Surprise Gifts – Get random gifts worth more than what you pay!',
                 '💸 Zero hidden fees'
               ].map((item) => (
                 <li key={item} className="flex items-center text-gray-700">
