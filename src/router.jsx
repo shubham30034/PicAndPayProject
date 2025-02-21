@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import InvoicePage from "./pages/InvoicePage";
 import PromoPage from "./pages/PromoPage";
 import PaymentPage from "./pages/Payment";
+import PaymentSuccess from "./pages/PaymentSuccess";
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
     },{
         path:"/payment",
         element:<PaymentPage/>
+    },
+    {
+        path:"/success",
+        element:<PaymentSuccess/>
     }
 ])
 

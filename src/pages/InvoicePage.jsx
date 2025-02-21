@@ -10,6 +10,9 @@ const InvoicePage = () => {
     typeof store.prizeRange === "number" ? store.prizeRange : store.prizeRange?.pize || 199
   );
 
+  
+  
+
   const navigate = useNavigate();
 
   

@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const PaymentPage = () => {
   const allProducts = useSelector((state) => state.product.product || []);
+  const navigate = useNavigate()
 
   const finalPrice = useSelector((store) => {
     const price =
@@ -30,6 +32,10 @@ const PaymentPage = () => {
     discount,
     shipping: 50,
   };
+
+  const paymentSuccess = ()=>{
+   navigate("/success")
+  }
 
   const calculateTotal = () =>
     (Number(finalPrice) || 0) + (orderSummary.shipping || 0);
@@ -145,7 +151,9 @@ const PaymentPage = () => {
           </div>
 
           {/* Pay Button */}
-          <button className="w-full mt-8 bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">
+          <button
+           onClick={paymentSuccess}
+          className="w-full mt-8 bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">
             Pay ₹{calculateTotal().toLocaleString()}
           </button>
         </div>
